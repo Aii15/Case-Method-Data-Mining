@@ -3,85 +3,65 @@ Repositori ini berisi kode program dari tugas case method mata kuliah Data Minin
 
 Program ini melakukan analisis sentimen ulasan Tokopedia menggunakan preprocessing teks, TF-IDF, dan algoritma Multinomial Naive Bayes.
 
-## Persyaratan
+## **1. Persiapan**
 
-- Python 3
-- `pip`
-- Git (jika ingin mengunduh repositori melalui terminal)
+Pastikan Python dan VS Code sudah terpasang.
 
-## Langkah Menjalankan Program
-
-### 1. Masuk ke direktori proyek
-
-Gunakan perintah `cd` sesuai folder penyimpanan proyek.
-
-### 2. Buat dan aktifkan virtual environment
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
-
-Jika Windows menolak eksekusi skrip aktivasi, gunakan Command Prompt:
-
-```bat
-venv\Scripts\activate.bat
-```
-
-Atau buka PowerShell dengan izin sementara:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\venv\Scripts\Activate.ps1
-```
-
-### 3. Perbarui pip dan instal dependensi
-
-```powershell
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 4. Pastikan dataset tersedia
-
-Pastikan file dataset berada pada lokasi berikut:
+Pastikan semua file dan dataset tersedia. File dataset harus berada pada lokasi berikut:
 
 ```text
 dataset/PRDECT-ID Dataset.csv
 ```
 
-Dataset wajib memiliki kolom `Customer Review` dan `Sentiment`.
+Dataset harus memiliki kolom `Customer Review` dan `Sentiment`.
 
-### 5. Jalankan program
+## **2. Instalasi library**
 
-```powershell
+Buka terminal VS Code dan jalankan:
+
+```bat
+python -m venv venv
+```
+
+Aktifkan virtual environment di Windows:
+
+```bat
+venv\Scripts\activate
+```
+
+Instal library:
+
+```bat
+pip install -r requirements.txt
+```
+
+## **3. Struktur program**
+
+```text
+main.py
+preprocessing.py
+requirements.txt
+dataset/
+    PRDECT-ID Dataset.csv
+output/
+```
+
+## **4. Menjalankan program**
+
+Setelah semua file dan dataset tersedia, jalankan perintah berikut di terminal VS Code:
+
+```bat
 python main.py
 ```
 
-Program akan:
+Pastikan terminal sedang berada di folder utama project.
 
-1. Membaca dataset ulasan.
-2. Melakukan preprocessing teks.
-3. Membagi data menjadi data training dan testing.
-4. Melakukan pembobotan TF-IDF.
-5. Melatih model Multinomial Naive Bayes.
-6. Menampilkan metrik evaluasi dan confusion matrix.
-7. Menyimpan hasil analisis ke folder `output/`.
+Setelah program selesai dijalankan, hasil analisis dan visualisasi akan tersimpan di folder `output/`.
 
-## Struktur Program
+## **5. Menonaktifkan virtual environment**
 
-```text
-main.py                     # Alur utama analisis sentimen
-preprocessing.py            # Fungsi preprocessing teks Bahasa Indonesia
-requirements.txt            # Daftar pustaka Python
-dataset/                    # Data ulasan
-output/                     # Grafik dan file hasil analisis
-```
+Untuk keluar dari virtual environment, jalankan:
 
-## Menonaktifkan Virtual Environment
-
-Setelah selesai menjalankan program, gunakan perintah berikut:
-
-```powershell
+```bat
 deactivate
 ```
