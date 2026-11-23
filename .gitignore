@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# Environment variables
+.env
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test and coverage reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs and caches
+*.log
+.cache/
+.ruff_cache/
+.mypy_cache/

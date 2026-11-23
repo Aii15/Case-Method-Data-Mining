@@ -1,0 +1,5 @@
+﻿Indikator,Sebelum Preprocessing,Sesudah Preprocessing,Perubahan
+Jumlah dokumen,5305.0,5305.0,0.0
+Total kata,85636.0,70952.0,-14684.0
+Kata unik,13986.0,6557.0,-7429.0
+Rata-rata kata per ulasan,16.14,13.37,-2.7700000000000014
